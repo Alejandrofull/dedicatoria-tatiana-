@@ -759,6 +759,355 @@ h1{
 .cockpit-speedline.show{opacity:.9}
 @media(max-width:650px){.cockpit-actions{grid-template-columns:1fr}.cockpit-panel{padding:20px 16px}#musicFloatBtn{right:12px;top:76px}}
 
+
+/* ---------- MOBILE RESPONSIVE UPGRADE ---------- */
+html,body{max-width:100%;overflow-x:hidden}
+img,svg,canvas{max-width:100%}
+
+.moto-strip-item,
+.moto-strip-item > div{
+  min-width:0;
+}
+.moto-strip-item strong,
+.moto-strip-item small{
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+.moto-strip-item strong{
+  line-height:1.15;
+}
+.moto-strip-item small{
+  line-height:1.3;
+}
+
+.mobile{
+  padding-left:max(12px,env(safe-area-inset-left));
+  padding-right:max(12px,env(safe-area-inset-right));
+  padding-bottom:max(4px,env(safe-area-inset-bottom));
+}
+.mobile .mobile-steer,
+.mobile .mobile-drive{
+  display:flex;
+  gap:10px;
+}
+.mobile button{
+  touch-action:none;
+  -webkit-user-select:none;
+  user-select:none;
+}
+.mobile .drive-btn{
+  width:64px;
+  height:58px;
+  font-size:.72rem;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+}
+.mobile .drive-btn.turbo{
+  background:linear-gradient(135deg,rgba(49,191,255,.22),rgba(155,124,255,.22));
+}
+.mobile .drive-btn.brake{
+  background:rgba(255,59,48,.12);
+}
+
+@media(max-width:860px){
+  .intro{
+    padding:88px 14px 44px;
+  }
+  .hero{
+    width:100%;
+    padding:18px;
+    gap:20px;
+    border-radius:24px;
+  }
+  .hero-left{
+    min-height:auto;
+  }
+  h1{
+    font-size:clamp(2.65rem,14vw,4.8rem);
+    line-height:.88;
+    letter-spacing:-.065em;
+  }
+  .lead{
+    margin-top:18px;
+    font-size:.94rem;
+    line-height:1.65;
+  }
+  .badges{
+    gap:7px;
+    margin-top:16px;
+  }
+  .badge{
+    font-size:.68rem;
+    padding:7px 9px;
+  }
+  .moto-strip{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px;
+    margin-top:16px;
+  }
+  .moto-strip-item{
+    min-height:84px;
+    padding:10px;
+    gap:8px;
+    border-radius:14px;
+    align-items:center;
+  }
+  .moto-strip-icon{
+    width:38px;
+    height:28px;
+    flex:0 0 38px;
+  }
+  .moto-strip-item strong{
+    font-size:.61rem;
+    letter-spacing:.055em;
+  }
+  .moto-strip-item small{
+    margin-top:4px;
+    font-size:.58rem;
+  }
+  .road-district{
+    align-items:flex-start;
+    flex-direction:column;
+    padding:12px;
+  }
+  .road-district strong{
+    white-space:normal;
+  }
+  .hero-bottom-note{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+  .showcase{
+    min-height:500px;
+    border-radius:22px;
+  }
+  .showcase-content{
+    min-height:500px;
+    padding:20px;
+  }
+  .controls{
+    gap:6px;
+  }
+  .key{
+    min-width:32px;
+    height:32px;
+    padding:0 8px;
+    font-size:.62rem;
+  }
+  .control-legend{
+    grid-template-columns:repeat(3,1fr);
+    row-gap:6px;
+  }
+  .scroll-section{
+    min-height:auto;
+    padding:72px 16px;
+  }
+  .story-card{
+    width:100%;
+    padding:22px 18px;
+    border-radius:22px;
+  }
+  .story-card h2{
+    font-size:clamp(2rem,10vw,3.8rem);
+  }
+  .preview-section{
+    min-height:auto;
+    padding:72px 14px 100px;
+  }
+  .preview-card{
+    width:100%;
+    padding:24px 18px;
+    border-radius:24px;
+  }
+  .preview-card h2{
+    font-size:clamp(2.2rem,12vw,4.4rem);
+  }
+  .finish{
+    align-items:flex-start;
+    overflow-y:auto;
+    padding:70px 12px 24px;
+  }
+  .finish-card{
+    width:100%;
+    border-radius:24px;
+  }
+  .photo{
+    min-height:52vh;
+  }
+  .copy{
+    padding:24px 20px 30px;
+  }
+  .copy h2{
+    font-size:clamp(2.3rem,12vw,4rem);
+  }
+
+  .topbar{
+    top:8px;
+    width:calc(100vw - 16px);
+    min-height:48px;
+    padding:8px 10px;
+    gap:8px;
+    border-radius:18px;
+  }
+  .brand{
+    display:none;
+  }
+  .status{
+    width:100%;
+    justify-content:space-between;
+    gap:7px;
+  }
+  .stat{
+    min-width:0;
+  }
+  .stat small{
+    font-size:.48rem;
+    letter-spacing:.07em;
+  }
+  .stat strong{
+    font-size:.7rem;
+  }
+  .nitro-wrap{
+    width:54px;
+  }
+  .progress{
+    width:60px;
+  }
+  #message{
+    top:66px;
+    max-width:calc(100vw - 24px);
+    text-align:center;
+    white-space:normal;
+    font-size:.72rem;
+  }
+  #musicFloatBtn{
+    top:66px;
+    right:10px;
+    min-height:38px;
+    padding:0 11px;
+    font-size:.64rem;
+  }
+  .sky-theme-indicator{
+    display:none;
+  }
+
+  body.game-active .mobile{
+    display:flex;
+    left:0;
+    right:0;
+    bottom:max(12px,env(safe-area-inset-bottom));
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:10px;
+  }
+  .mobile button{
+    width:58px;
+    height:54px;
+    border-radius:16px;
+    font-size:1.15rem;
+  }
+  .mobile .drive-btn{
+    width:58px;
+    height:54px;
+    font-size:.58rem;
+  }
+
+  .cockpit-layer{
+    padding:0 12px max(18px,env(safe-area-inset-bottom));
+  }
+  .cockpit-panel{
+    width:100%;
+    padding:18px 14px;
+    border-radius:20px;
+  }
+  .cockpit-panel h3{
+    font-size:clamp(1.7rem,9vw,2.6rem);
+  }
+  .cockpit-panel p{
+    font-size:.8rem;
+  }
+  .cockpit-actions{
+    grid-template-columns:1fr;
+  }
+  .cockpit-btn{
+    min-height:52px;
+  }
+
+  .rose-garden .rose-3d{
+    opacity:.38;
+  }
+}
+
+@media(max-width:390px){
+  .hero{padding:14px}
+  .moto-strip-item{
+    min-height:78px;
+    padding:8px;
+    gap:6px;
+  }
+  .moto-strip-icon{
+    width:32px;
+    height:24px;
+    flex-basis:32px;
+  }
+  .moto-strip-item strong{
+    font-size:.56rem;
+    letter-spacing:.035em;
+  }
+  .moto-strip-item small{
+    font-size:.53rem;
+  }
+  .mobile{
+    gap:6px;
+  }
+  .mobile .mobile-steer,
+  .mobile .mobile-drive{
+    gap:6px;
+  }
+  .mobile button,
+  .mobile .drive-btn{
+    width:52px;
+    height:50px;
+  }
+  .progress{
+    width:45px;
+  }
+  .nitro-wrap{
+    width:46px;
+  }
+}
+
+@media(max-width:700px) and (orientation:landscape){
+  .topbar{
+    width:calc(100vw - 12px);
+  }
+  .mobile{
+    bottom:6px;
+  }
+  .mobile button,
+  .mobile .drive-btn{
+    width:54px;
+    height:46px;
+  }
+  .cockpit-layer{
+    align-items:center;
+    padding:58px 12px 10px;
+  }
+  .cockpit-panel{
+    max-width:620px;
+    padding:14px;
+  }
+  .cockpit-panel h3{
+    font-size:1.6rem;
+  }
+  .cockpit-panel p{
+    margin-bottom:10px;
+  }
+  .cockpit-actions{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1022,9 +1371,16 @@ h1{
 <div class="cockpit-speedline" id="cockpitSpeedline"></div>
 <button id="musicFloatBtn" type="button">Pausar música</button>
 
-<div class="mobile">
-  <button id="leftBtn">←</button>
-  <button id="rightBtn">→</button>
+<div class="mobile" aria-label="Controles móviles">
+  <div class="mobile-steer">
+    <button id="leftBtn" type="button" aria-label="Girar a la izquierda">←</button>
+    <button id="rightBtn" type="button" aria-label="Girar a la derecha">→</button>
+  </div>
+  <div class="mobile-drive">
+    <button id="brakeBtn" class="drive-btn brake" type="button" aria-label="Frenar">Freno</button>
+    <button id="gasBtn" class="drive-btn" type="button" aria-label="Acelerar">Gas</button>
+    <button id="turboBtn" class="drive-btn turbo" type="button" aria-label="Turbo">Turbo</button>
+  </div>
 </div>
 
 <script type="module">
@@ -1047,6 +1403,9 @@ const skyPhrase=document.getElementById("skyPhrase");
 const skyGlow=document.getElementById("skyGlow");
 const leftBtn=document.getElementById("leftBtn");
 const rightBtn=document.getElementById("rightBtn");
+const brakeBtn=document.getElementById("brakeBtn");
+const gasBtn=document.getElementById("gasBtn");
+const turboBtn=document.getElementById("turboBtn");
 const playBtn2=document.getElementById("playBtn2");
 const previewBtn=document.getElementById("previewBtn");
 const landingWrap=document.getElementById("landingWrap");
@@ -2157,6 +2516,9 @@ let targetSpeed=0;
 let lives=3;
 let bikeX=0;
 let touchSteer=0;
+let touchAccelerate=false;
+let touchBrake=false;
+let touchNitro=false;
 let invulnerable=0;
 let nitro=100;
 let paused=false;
@@ -2395,6 +2757,12 @@ addEventListener("keydown",e=>{
   if(["a","d","w","s","arrowleft","arrowright","arrowup","arrowdown","shift"].includes(k))e.preventDefault();
 });
 addEventListener("keyup",e=>keys[e.key.toLowerCase()]=false);
+addEventListener("blur",()=>{
+  touchSteer=0;
+  touchAccelerate=false;
+  touchBrake=false;
+  touchNitro=false;
+});
 
 function setTouch(v){touchSteer=v}
 function clearTouch(){touchSteer=0}
@@ -2406,6 +2774,22 @@ function clearTouch(){touchSteer=0}
   leftBtn.addEventListener(ev,clearTouch);
   rightBtn.addEventListener(ev,clearTouch);
 });
+
+function bindHoldButton(btn,onDown,onUp){
+  if(!btn)return;
+  const down=e=>{e.preventDefault();onDown();};
+  const up=e=>{e.preventDefault();onUp();};
+  btn.addEventListener("pointerdown",down,{passive:false});
+  btn.addEventListener("pointerup",up,{passive:false});
+  btn.addEventListener("pointercancel",up,{passive:false});
+  btn.addEventListener("pointerleave",up,{passive:false});
+  btn.addEventListener("touchstart",down,{passive:false});
+  btn.addEventListener("touchend",up,{passive:false});
+}
+
+bindHoldButton(gasBtn,()=>touchAccelerate=true,()=>touchAccelerate=false);
+bindHoldButton(brakeBtn,()=>touchBrake=true,()=>touchBrake=false);
+bindHoldButton(turboBtn,()=>touchNitro=true,()=>touchNitro=false);
 
 playBtn.addEventListener("click",start);
 playBtn2.addEventListener("click",start);
@@ -2556,9 +2940,9 @@ function animate(){
     if(keys["a"]||keys["arrowleft"])input=-1;
     if(keys["d"]||keys["arrowright"])input=1;
 
-    const accelerating = keys["w"] || keys["arrowup"];
-    const braking = keys["s"] || keys["arrowdown"];
-    const usingNitro = keys["shift"] && nitro>0;
+    const accelerating = keys["w"] || keys["arrowup"] || touchAccelerate;
+    const braking = keys["s"] || keys["arrowdown"] || touchBrake;
+    const usingNitro = (keys["shift"] || touchNitro) && nitro>0;
 
     targetSpeed = accelerating ? Math.min(MAX_SPEED,34+distance/120) : 24;
     if(braking) targetSpeed = 12;
